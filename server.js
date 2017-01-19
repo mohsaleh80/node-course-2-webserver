@@ -80,6 +80,16 @@ app.get('/about',(req,res)=>{
           pageTitle:'About Page ...'
       });
 });
+
+// dynamic using view engine
+app.get('/projects',(req,res)=>{
+    // res.send('About Page!');
+    res.render('projects.hbs',{
+        pageTitle:'Potfolio Page ...',
+        message : 'here is our portfolio of projects.'
+    });
+});
+
 app.get('/bad',(req,res)=>{
 
     res.send({
