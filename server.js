@@ -37,7 +37,7 @@ app.use((req,res,next)=>{
 
     fs.appendFile('log-server.log', logMessage, (err) => {
         if (err) {
-            console.log('The "data to append was not appended to file!');
+            console.log('The data to append was not appended to file!');
         }
     });
     next();
